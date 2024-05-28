@@ -1,0 +1,82 @@
+<div class="row" style="opacity: 0.8;">
+
+  <div class="col-md-6 mx-auto">
+            <br><br>
+    <div class="card text-white" style="background-color: #154e9c">
+
+      <div class="card-header pt-5">
+        <h4 class="text-center" style="font-size: 2rem">
+          Registro del Usuario
+        </h4>
+
+        <form action="/auth/signup" method="POST">
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade show active" id="home" role="tabpanel">
+      <div class="card-body" style="font-size: 2rem;">
+          <div class="mb-3">
+            <label for="email">Email:</label> 
+            <input  type="email"  class="form-control bg-ligth"  name="email"  placeholder="Email"  value="{{email}}" required />
+          </div>
+          <div class="mb-3">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control bg-ligth " name="name" placeholder="Nombre" value="{{name}}" required/>
+          </div>
+          <div class="mb-3">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control bg-ligth" name="apellido" placeholder="Primer Apellido" value="{{apellido}}" required/>
+                              <input class="visually-hidden" type="number" name="puntos" value=0 readonly>
+          </div>
+                    <div class="mb-3">
+            <label for="celular">Celular:</label>
+            <input type="number" class="form-control bg-ligth" name="celular" placeholder="Celular" value="{{celular}}" required/>
+          </div>
+                    <div class="mb-3">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" class="form-control bg-ligth" name="ciudad" placeholder="ciudad" value="{{ciudad}}" required/>
+          </div>
+          <div class="mb-3">
+       <!--       <label for="profesional" class="form-label ">Es Usted Profesional de la Salud</label>
+              <select id="profesional" name="profesional" class="form-select" >
+                <option value="" selected>Seleccione su Respuesta</option>
+                <option value="1" >Si</option>
+                <option value="0" >No</option>
+               
+              </select>-->
+
+              <fieldset>
+  <legend>¿Es Usted Profesional de la Salud?</legend>
+
+  <div>
+    <input type="radio" id="profesional" name="profesional" value="1"  />
+    <label for="profesional">Si</label>
+  </div>
+
+  <div>
+    <input type="radio" id="profesional" name="profesional" value="0" />
+    <label for="profesional">No</label>
+  </div>
+</fieldset>
+          </div>
+      </div>
+  </div>
+</div>
+              <div class="form-termsAndConditions termsAndConditions" style="color: white;">
+                <input type="checkbox" id="termsAndConditions" name="termsAndConditions" onChange="comprobar(this);">
+                <label for="termsAndConditions" style="font-size: 2rem">Acepto los </label>
+                <a href="/Estudios/AUTORIZACIÓN PARA EL TRATAMIENTO DE DATOS PERSONALES.pdf" target="_blank" style="font-size: 2rem;">Términos y Condiciones</a>
+                <p style="font-size: 2rem">de la política de protección de datos.</p>
+                <p class="mensajeError"></p>
+              </div>
+
+          <button class="btn btn-success btn-block" style="background-color: #e31e4d; font-size: 2rem" >
+            Registro
+          </button>
+        </form>
+        </form>
+      </div>
+
+
+    </div>
+<br><br>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<!--<nav class="navbar navbar-expand-lg navbar-dark p-2 bg-black">-->
+    <nav id="header" class="navbar navbar-expand-lg navbar-light "  style="border-bottom: 5px solid #030044"  >
+      <div class="container" style="align-items: flex-start;">
+        <a class="navbar-brand" href="/">
+          <img style="width: auto"  src="/img/Logo_FAES_FARMA.png" >
+              </a>
+                    
+     </div>
+
+
+
+
+    <div  id="navbarNav"  >
+
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+
+            {{#if tp}}
+                        <li class="nav-item">
+            </li>
+
+                            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color:black; font-size: 1.5vh" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"> Fase de Grupos</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="nav-link" style=" color:black; font-size: 1.5vh" href="/notesA">Grupo A</a>
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notesB">Grupo B</a>
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notesC">Grupo C</a>
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notesD">Grupo D</a>
+            </ul>
+          </li>
+
+
+
+            <li class="nav-item">
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notesqf">Cuartos de Final</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notessf">SemiFinal </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notessf">Final</a>
+            </li>
+ 
+
+                            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color:black; font-size: 1.5vh" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"> Mis Resultados</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="nav-link" style=" color:black; font-size: 1.5vh" href="/notes/imprimir2">Mis Resultados</a>
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notespremios">Premios</a>
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/notesbases">Bases del Juego</a>
+            </ul>
+          </li>
+ 
+ 
+             <li class="nav-item">
+              <a class="nav-link" style="color:black ; font-size: 1.5vh" href="/auth/logout">Salir</a>
+            </li>
+
+            {{else}}
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"> PROCESOS</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" style=" font-size: 1.5vh" href="/notes">Cargar Resultados</a>
+              <a class="dropdown-item" style=" font-size: 1.5vh" href="/notesb">Blopquear Juegos</a>
+              <a class="dropdown-item" style=" font-size: 1.5vh" href="/notes/imprimir">Reporte de resultados</a>
+              <a class="dropdown-item" style=" font-size: 1.5vh" href="/notes/imprimir1">Posicion de Jugadores</a>
+
+              <a class="dropdown-item"  style="font-size: 1.5vh" href="/auth/logout">Salir</a>
+            </ul>
+          </li>
+          {{/if}}
+        {{else}}
+            <li class="nav-item">
+              <a class="nav-link" style="color:black; font-size: 1.5vh"  href="/auth/grupos">Grupos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:black; font-size: 1.5vh"  href="/auth/sedes">Sedes</a>
+            </li>
+
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color:black; font-size: 1.5vh" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"> Ingreso</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="nav-link" style="color:#10447f; font-size: 1.5vh;"  href="/auth/signin">Ingresar</a>
+              <a class="nav-link" style="color:#10447f; font-size: 1.5vh"  href="/auth/signup">Registrarse</a>
+            </ul>
+
+
+
+
+
+
+          
+        {{/if}}
+      </ul>
+    </div>
+
+</nav>

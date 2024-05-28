@@ -1,0 +1,406 @@
+.track {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    margin-top: -100px;
+    overflow: hidden
+}
+
+.track iframe {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden
+}
+
+.nav-link
+{
+    color: white;
+}
+
+
+
+.ms__header {
+    background-color: #10447f;
+    background: url(../img/header__bg-54e42f797c72d917d8d67a82f4ceb5232672c24d4f7b7f0f26ea07bdd6eaf815.jpg);
+    background-size: cover;
+    color: #FFFFFF;
+    position: relative
+}
+
+.ms__header__deco--left {
+    position: absolute;
+    left: 0;
+    height: 100%
+}
+
+.ms__header__deco--right {
+    position: absolute;
+    right: 0;
+    height: 100%
+}
+
+.ms__header__topNav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0
+}
+
+.ms__header__topNav__logo {
+    display: block;
+    width: auto
+}
+
+.ms__header__topNav__logo img {
+    height: 50px;
+    display: block;
+    width: auto
+}
+
+@media (min-width: 768px) {
+    .ms__header__topNav__logo img {
+        height:100px
+    }
+}
+
+.ms__header__topNav__options {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px
+}
+
+@media (min-width: 768px) {
+    .ms__header__topNav__options {
+        right:90px
+    }
+}
+
+.ms__header__topNav__languageBtn {
+    position: relative;
+    width: 50px;
+    height: 31px;
+    color: #FFFFFF;
+    line-height: 1.6;
+    cursor: pointer
+}
+
+.ms__header__topNav__languageBtn label {
+    position: relative;
+    cursor: pointer;
+    padding: 0.15rem 0.25rem;
+    display: flex;
+    justify-content: space-between
+}
+
+@media (max-height: 800px) and (min-width: 768px) {
+    .ms__header__topNav__languageBtn label {
+        padding-top:0;
+        padding-bottom: 0
+    }
+}
+
+.ms__header__topNav__languageBtn label input[type=checkbox] {
+    display: none
+}
+
+.ms__header__topNav__languageBtn label span {
+    display: inline-block;
+    font-weight: bold;
+    transform: translate(0)
+}
+
+.ms__header__topNav__languageBtn label .ms__header__topNav__languageBtn__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.88);
+    border: 1px solid #10447f;
+    border-radius: 4px
+}
+
+@media (min-width: 768px) {
+    .ms__header__topNav__languageBtn label .ms__header__topNav__languageBtn__bg {
+        background-color:rgba(0,0,0,0.22)
+    }
+}
+
+.ms__header__topNav__languageBtn label>.ms__header__topNav__languageBtn__languageList {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 31px
+}
+
+.ms__header__topNav__languageBtn label:hover .ms__header__topNav__languageBtn__bg,.ms__header__topNav__languageBtn label input[type=checkbox]:checked~.ms__header__topNav__languageBtn__bg {
+    background: #56AFFF
+}
+
+.ms__header__topNav__languageBtn label input[type=checkbox]:checked~.ms__header__topNav__languageBtn__languageList {
+    display: block
+}
+
+.ms__header__topNav__languageBtn label input[type=checkbox]:checked~.ms__header__topNav__languageBtn__icon {
+    transform: rotate(-180deg)
+}
+
+.ms__header__topNav__languageBtn__icon {
+    transition: all .2s ease-in-out
+}
+
+.ms__header__topNav__languageBtn__icon svg {
+    height: 8px
+}
+
+.ms__header__topNav__languageBtn__languageList {
+    border-radius: 4px;
+    background: #003282
+}
+
+.ms__header__topNav__languageBtn__languageList li {
+    border-bottom: 1px solid rgba(0,0,0,0.22);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    cursor: pointer
+}
+
+.ms__header__topNav__languageBtn__languageList li:last-child {
+    border: none
+}
+
+.ms__header__topNav__languageBtn__languageList li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    outline: none
+}
+
+.ms__header__topNav__languageBtn__languageList li a:hover,.ms__header__topNav__languageBtn__languageList li a.active {
+    font-weight: bold;
+    color: #56AFFF
+}
+
+.ms__subline {
+    padding: 1.5rem 1rem;
+    background: #FFFFFF
+}
+
+.ms__subline h1 {
+    font-family: "Noto Sans Black", "Helvetica Neue", Arial, sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #0F0064;
+    text-align: center
+}
+
+main.ms__main {
+    position: relative;
+    background: #FFFFFF;
+    padding-top: 0;
+    padding-bottom: 20px
+}
+
+@media (max-width: 575.98px) {
+    main.ms__main .neo-content {
+        padding-top:0
+    }
+}
+
+@media (max-height: 800px) and (min-width: 768px) {
+    main.ms__main .neo-content {
+        padding-top:10px
+    }
+}
+
+.ms__promo__apps,.ms__promo__store {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px 0;
+    justify-content: center
+}
+
+.ms__promo__apps__block {
+    background: url(../img/appLinks__bg-832ceb9088c5db7425a130ec8812199e1413018dbfb0272ca873b0e04917ff7e.jpg);
+    background-size: cover;
+    max-width: 400px;
+    padding: 10px 0;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.35);
+    display: flex
+}
+
+.ms__promo__apps__block>.appstoreLinks {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.ms__promo__apps__block>.appstoreLinks .appstoreLinks__ios,.ms__promo__apps__block>.appstoreLinks .appstoreLinks__android {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center
+}
+
+.ms__promo__apps__block>.appstoreLinks .appstoreLinks__ios img,.ms__promo__apps__block>.appstoreLinks .appstoreLinks__android img {
+    display: block;
+    width: 100%
+}
+
+.ms__promo__apps__block>.appstoreLinks .appstoreLinks__ios img.appstoreLinks__inactive,.ms__promo__apps__block>.appstoreLinks .appstoreLinks__android img.appstoreLinks__inactive {
+    opacity: .5
+}
+
+.ms__promo__store {
+    margin-bottom: 20px
+}
+
+.ms__promo__store__block {
+    outline: 6px solid rgba(0,0,0,0.05);
+    display: block;
+    position: relative;
+    color: #fff
+}
+
+.ms__promo__store__block:hover,.ms__promo__store__block:active {
+    color: #fff
+}
+
+.ms__promo__store__block>img {
+    max-width: 100%;
+    display: block
+}
+
+.ms__promo__store__block__label {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: "Noto Sans Black", "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 3px rgba(255,255,255,0.5)
+}
+
+@media (min-width: 576px) {
+    .ms__promo__store__block__label {
+        font-size:24px
+    }
+}
+
+@media (min-width: 768px) {
+    .ms__promo__store__block__label {
+        font-size:36px
+    }
+}
+
+.ms__promo__store__block:hover .ms__promo__store__block__label {
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.9)
+}
+
+footer.ms__footer {
+    background-color:rgb(223, 232, 233);
+/*    background: url(../img/footer__bg-e3b4d4386a9a2671ae352fde7573ef90e2353be5dce8737bcc9cb41ea6582aec.jpg);*/
+    background-size: cover;
+    color: #000000;
+    position: relative;
+    font-size: .75rem;
+    padding: 30px 0 50px 0
+}
+
+.ms__footer__legal {
+    height: auto;
+    text-align: center;
+    padding: 16px;
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.ms__footer__legal #pnn-footer #policies {
+    padding: 16px 0
+}
+
+.ms__footer__legal a:link,.ms__footer__legal a:visited,.ms__footer__legal a:active {
+    text-decoration: none;
+    color: #000000;
+    padding: 0 6px
+}
+
+.ms__footer__legal a:hover {
+    text-decoration: underline
+}
+
+.ms__footer__icons {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.ms__footer__icons__icon {
+    text-align: center
+}
+
+.ms__footer__icons__icon>img {
+    height: 140px
+}
+
+input,button,select {
+    outline: none;
+    font-family: var(--fontFamilyBase)
+}
+
+button {
+    cursor: pointer
+}
+
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,textarea:-webkit-autofill,textarea:-webkit-autofill:hover,textarea:-webkit-autofill:focus,select:-webkit-autofill,select:-webkit-autofill:hover,select:-webkit-autofill:focus {
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s
+}
+
+input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="search"],input[type="tel"],input[type="text"],input[type="time"],input[type="url"],input[type="week"],select,select:focus,textarea {
+    font-size: 2rem !important;     height: auto;
+}
+
+.ms__figureImage {
+    height: 100%;
+    width: 100%
+}
+
+.ms__figureImage__picture {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: 100%
+}
+
+.ms__figureImage__img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    align-self: flex-start
+}
+
+main.ms__main .microsite__content .neo .CookieDeclaration {
+    padding: 0 20px
+}
+
+:root {
+    --ff-body-font-family-italic: Noto Sans Italic, Helvetica Neue, Arial, sans-serif
+}

@@ -1,0 +1,143 @@
+
+#carousel {
+  position: relative;
+}
+
+#carousel .carousel-inner img {
+  max-height: 70vh;
+}
+.nav-link
+{
+  color: white;
+}
+
+#carousel .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+  height: 100%;
+}
+
+.boxesContainer {
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+
+}
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card1 {
+  transform: rotateY(180deg);
+}
+
+.card1 {
+  background: white;
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.front, .back {
+
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  border-radius: 5%;
+}
+
+.front, img {
+  width:100%;
+  height:100%;
+}
+
+.back {
+  transform: rotateY( 180deg);
+}
+.tarjeta3 {
+  display:flex;
+   flex-direction:row;
+   justify-content:flex-end;
+   align-items: center;
+   width:60%;
+   height: 100%;
+   border: 1px solid lightgray;
+   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+   border-radius:15px;
+   max-width: 60%;
+   margin: auto;
+   margin-bottom: 2%;
+   text-align:left;
+   font-weight:bold;
+   padding: 25px 0 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   background-image: url('/images/registrese3.jpg'); 
+   background-size: cover; 
+   background-repeat: no-repeat; 
+   
+       
+ 
+ 
+   
+ }
+
+ .left {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  margin-left: 2%;
+  float: left;
+  position: relative;
+  width: 45%;
+  height: auto;
+}
+.left1 {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  margin-left: 2%;
+  float: left;
+  position: relative;
+  width: 45%;
+  height: 100%;
+  background-image: url('/images/registro1.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.right {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 2%;
+  position: relative;
+  float: left;
+  width: 45%;
+
+  height: auto;
+}
+

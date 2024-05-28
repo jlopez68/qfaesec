@@ -1,0 +1,31 @@
+<div class="row" style=" opacity: 0.8;">
+  <div class="col-md-4 mx-auto">
+    <div class="card mt-5  rounded">
+      <div class="card-header text-center pt-5">
+        <h1 class="h4 ">
+          Ingreso
+        </h1>
+      </div>
+
+      <div class="card-body" style="font-size: 2rem;">
+        <form action="/auth/signin" method="POST">
+          <div class="mb-3">
+            <label  for="email">Email:</label>
+            <input 
+              type="text"
+              class="form-control"  style="color:black; "
+              name="email"
+              autofocus
+            />
+          </div>
+          <input class="visually-hidden" type="text" name="password" value="1234" readonly>
+                    <input class="visually-hidden" type="text" name="puntos" value=0 readonly>
+          <button class="btn btn-success btn-block" style="background-color: #e31e4d; font-size: 2rem">
+            Ingresar
+          </button>
+        </form>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>

@@ -1,0 +1,196 @@
+<div><br><br></div>
+<div class="slider">
+	<div class="slide-track">
+		<div class="slide">
+			<img   src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+        	 <img  src="/img/Bilaxten2.jpg" alt="Second slide">
+		</div>
+		<div class="slide">
+          	<img  src="/img/Defal2.jpg" alt="Second slide">
+        </div>
+		<div class="slide">
+          	<img  src="/img/Diotul.jpg" alt="Second slide">
+        </div>
+		<div class="slide">
+			<img src="/img/Eclosynt 250.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img  src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Eclosynt Nas.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Idofix.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="/img/Iprasynt.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Lactofaes.jpg"  alt="">
+		</div>
+				<div class="slide">
+			
+			<img  src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Lactofaes2.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Sacrusyt.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Venosmil.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Potenciator.jpg"  alt="">
+		</div>
+						<div class="slide">
+			<img  src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Positon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Ferroprotina.jpg"  alt="">
+		</div>
+				<div class="slide">
+			<img src="/img/defal.jpg"  alt="">
+		</div>
+
+		<div class="slide">
+			<img src="/img/Bilaxten.jpg"  alt="">
+		</div>
+				<div class="slide">
+			<img src="/img/Hidroferol.jpg"  alt="">
+		</div>
+
+		<div class="slide">
+			<img  src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+        	 <img  src="/img/Bilaxten2.jpg" alt="Second slide">
+		</div>
+		<div class="slide">
+          	<img  src="/img/Defal2.jpg" alt="Second slide">
+        </div>
+		<div class="slide">
+          	<img  src="/img/Diotul.jpg" alt="Second slide">
+        </div>
+		<div class="slide">
+			<img src="/img/Eclosynt 250.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Eclosynt Nas.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Idofix.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="/img/Iprasynt.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Lactofaes.jpg"  alt="">
+		</div>
+				<div class="slide">
+			
+			<img src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Lactofaes2.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Sacrusyt.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Venosmil.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Potenciator.jpg"  alt="">
+		</div>
+						<div class="slide">
+			<img src="/img/balon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Positon.jpg"  alt="">
+		</div>
+		<div class="slide">
+			<img src="/img/Ferroprotina.jpg"  alt="">
+		</div>
+				<div class="slide">
+			<img src="/img/defal.jpg"  alt="">
+		</div>
+
+		<div class="slide">
+			<img src="/img/Bilaxten.jpg"  alt="">
+		</div>
+				<div class="slide">
+			<img src="/img/Hidroferol.jpg"  alt="">
+		</div>
+
+		<div class="slide">
+			<img src="/img/balon.jpg"  alt="">
+		</div>
+
+	</div>
+</div>
+<div><br><br></div>
+
+
+<br>
+<h1 style="text-align:center; font-size: 2.5vh " > {{nombre}}   {{apellido}} </h1>
+ <h1 style="text-align:center; font-size: 2.5vh "  >Bienvenido al Grupo D</h1> 
+<br>
+<h2 style="font-size:2.5vh; margin-left:10%">Su puntuación:  <b>   {{puntos}} </b></h2>
+<h2 style="font-size:2.5vh; margin-left:10%">estas Ubicado en la Posición: <b> {{posicion}}</b></h2>
+<br>
+<div style="width: 80%; text-align:center; margin-left:10%">
+
+
+
+{{#if notes}}
+
+  <table class="table table-bordered table-hover table-primary table-striped-columns">
+    <thead>
+      <tr>
+
+       <th >GRUPO</th>
+        <th >FECHA</th>
+        <th colspan="2" >EQUIPO </th>
+        <th >PRONÓSTICO</th>
+        <th colspan="2" >EQUIPO </th>
+        <th >PRONÓSTICO</th>
+        <th >PUNTOS</th>
+        <th  >Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each notes}}
+        <tr>
+          <td >{{grupo}}</td>
+          <td >{{fecha}}</td>
+          <td ><img style="width:2rem"    src="{{mapa1}}" alt=""></td> 
+		  <td > {{equipo1}}</td>
+          <td >{{pronostico1}}</td>
+          <td ><img style="width:2rem" src="{{mapa2}}" alt=""></td> 
+		  <td >{{equipo2}}</td>
+          <td >{{pronostico2}}</td>
+          <td >{{puntos}}</td>
+
+          <td><a href="/notes/edit/{{_id}}"><i class="fas fa-pen-alt" style="color: black"></i></a></td>
+          
+        </tr>
+       {{/each}}
+    </tbody>
+  </table>
+{{/if}}
+</div>
+<br><br>
+

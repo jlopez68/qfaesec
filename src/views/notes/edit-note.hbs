@@ -1,0 +1,105 @@
+
+
+
+{{#each errors}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header bg-dark text-center">
+      <h3 class="text-white">Datos del Partido</h3>
+    </div>
+    <div class="card-body text-right">
+        <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="mb-3">
+          <label for="title">GRUPO</label>
+          <input
+            type="text"
+            name="grupo"
+            class="form-control"
+            value="{{note.grupo}}"
+            readonly
+          />
+
+        </div>
+
+                <div class="mb-3">
+          <label for="description">FECHA</label>
+            <input
+            type="text"
+            name="fecha"
+            class="form-control"
+            value = "{{note.fecha}}"
+               readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">EQUIPO</label>
+            <input
+            type="text"
+            name="equipo1"
+            class="form-control"
+            value = "{{note.equipo1}}"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">GOLES</label>
+            <input
+            type="text"
+            name="resultado1"
+            class="form-control"
+            value = "{{note.resultado1}}"
+            
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">EQUIPO</label>
+            <input
+            type="text"
+            name="equipo2"
+            class="form-control"
+            value = "{{note.equipo2}}"
+            readonly
+          />
+        </div>
+                <div class="mb-3">
+          <label for="description">GOLES</label>
+            <input
+            type="text"
+            name="resultado2"
+            class="form-control"
+            value = "{{note.resultado2}}"
+            
+          />
+            {{#if tp}}
+        {{else}}
+
+          <div class="mb-3">
+              <label for="Cerrar" class="form-label ">Cerrar Juego??</label>
+              <select id="cerrar" name="cerrar" class="form-select" >
+                <option value="1" selected>Si</option>
+                <option value="2">No</option>
+              </select>
+          </div>
+          {{/if}}
+
+
+        </div>
+ 
+         <input class="visually-hidden" type="text" name="jugado" value="S" readonly>
+
+ 
+          <button class="btn btn-success btn-block">Guardar</button>
+
+            <!--          <a href="/notes"><i class="fas fa-undo" style="color: rgb(243, 15, 15);"></i></a>-->
+      </form>
+    </div>
+  </div>
+</div>
