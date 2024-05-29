@@ -29,11 +29,11 @@ const listjuegos = [{
     {grupo: "C",fecha: '01/07/2024',equipo1: "BOLIVIA",equipo2: "PANAMÁ",RESULTADO1: 0,RESULTADO2: 0},
     {grupo: "C",fecha: '01/07/2024',equipo1: "USA",equipo2: "URUGUAY",RESULTADO1: 0,RESULTADO2: 0},
     {grupo: "D",fecha: '24/06/2024',equipo1: "COLOMBIA",equipo2: "PARAGUAY",RESULTADO1: 0,RESULTADO2: 0},
-    {grupo: "D",fecha: '24/06/2024',equipo1: "BRAZIL",equipo2: "COSTA RICA",RESULTADO1: 0,RESULTADO2: 0},
+    {grupo: "D",fecha: '24/06/2024',equipo1: "BRASIL",equipo2: "COSTA RICA",RESULTADO1: 0,RESULTADO2: 0},
     {grupo: "D",fecha: '28/06/2024',equipo1: "COLOMBIA",equipo2: "COSTA RICA",RESULTADO1: 0,RESULTADO2: 0},
-    {grupo: "D",fecha: '28/06/2024',equipo1: "PARAGUAY",equipo2: "BRAZIL",RESULTADO1: 0,RESULTADO2: 0},
+    {grupo: "D",fecha: '28/06/2024',equipo1: "PARAGUAY",equipo2: "BRASIL",RESULTADO1: 0,RESULTADO2: 0},
     {grupo: "D",fecha: '02/07/2024',equipo1: "COSTA RICA",equipo2: "PARAGUAY",RESULTADO1: 0,RESULTADO2: 0},
-    {grupo: "D",fecha: '02/07/2024',equipo1: "BRAZIL",equipo2: "COLOMBIA",RESULTADO1: 0,RESULTADO2: 0}
+    {grupo: "D",fecha: '02/07/2024',equipo1: "BRASIL",equipo2: "COLOMBIA",RESULTADO1: 0,RESULTADO2: 0}
 ]
 
 Juegos.insertMany(listjuegos)
@@ -80,15 +80,15 @@ createJuegos()*/
                          const juego17 = await newjuego17.save();
                            const newjuego18 = new Juegos({jugado:"N",numero:19,grupo: "D",fecha: '24/06/2024',equipo1: "COLOMBIA",equipo2: "PARAGUAY",RESULTADO1: 0,RESULTADO2: 0});
                            const juego18 = await newjuego18.save();
-                             const newjuego19 = new Juegos({jugado:"N",numero:20,grupo: "D",fecha: '24/06/2024',equipo1: "BRAZIL",equipo2: "COSTA RICA",RESULTADO1: 0,RESULTADO2: 0});
+                             const newjuego19 = new Juegos({jugado:"N",numero:20,grupo: "D",fecha: '24/06/2024',equipo1: "BRASIL",equipo2: "COSTA RICA",RESULTADO1: 0,RESULTADO2: 0});
                              const juego19 = await newjuego19.save();
                                const newjuego20 = new Juegos({jugado:"N",numero:21,grupo: "D",fecha: '28/06/2024',equipo1: "COLOMBIA",equipo2: "COSTA RICA",RESULTADO1: 0,RESULTADO2: 0});
                                const juego20 = await newjuego20.save();
-                                 const newjuego21 = new Juegos({jugado:"N",numero:22,grupo: "D",fecha: '28/06/2024',equipo1: "PARAGUAY",equipo2: "BRAZIL",RESULTADO1: 0,RESULTADO2: 0});
+                                 const newjuego21 = new Juegos({jugado:"N",numero:22,grupo: "D",fecha: '28/06/2024',equipo1: "PARAGUAY",equipo2: "BRASIL",RESULTADO1: 0,RESULTADO2: 0});
                                  const juego21 = await newjuego21.save();
                                    const newjuego22 = new Juegos({jugado:"N",numero:23,grupo: "D",fecha: '02/07/2024',equipo1: "COSTA RICA",equipo2: "PARAGUAY",RESULTADO1: 0,RESULTADO2: 0});
                                    const juego22 = await newjuego22.save();
-                                     const newjuego23 = new Juegos({jugado:"N",numero:24,grupo: "D",fecha: '02/07/2024',equipo1: "BRAZIL",equipo2: "COLOMBIA",RESULTADO1: 0,RESULTADO2: 0});
+                                     const newjuego23 = new Juegos({jugado:"N",numero:24,grupo: "D",fecha: '02/07/2024',equipo1: "BRASIL",equipo2: "COLOMBIA",RESULTADO1: 0,RESULTADO2: 0});
                                      const juego23 = await newjuego23.save();
 
                                      console.log("JUEGOS CREADOS");
