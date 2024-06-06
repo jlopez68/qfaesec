@@ -9,8 +9,9 @@ export const renderNotespremios = async (req, res) => {
   const usua = req._id
   const tp = true;
   const ad = false;
+  const ini = false;
 
-  res.render("notes/notes-premios", { nombre, tp, ad});
+  res.render("notes/notes-premios", { nombre, tp, ad, ini});
 };
 
 export const renderNotesbases = async (req, res) => {
@@ -18,8 +19,9 @@ export const renderNotesbases = async (req, res) => {
   const usua = req._id
   const tp = true;
   const ad = false;
+  const ini = false;
 
-  res.render("notes/all-notes-bases", { nombre, tp, ad});
+  res.render("notes/all-notes-bases", { nombre, tp, ad, ini});
 };
   
 export const renderNotesqf = async (req, res) => {
@@ -27,7 +29,9 @@ export const renderNotesqf = async (req, res) => {
   const usua = req._id
   const tp = true;
   const ad = false;
-  res.render("notes/all-notes-qf", { nombre, tp, ad});
+  const ini = false;
+
+  res.render("notes/all-notes-qf", { nombre, tp, ad, ini});
 };
 
 export const renderNotessf = async (req, res) => {
@@ -35,7 +39,9 @@ export const renderNotessf = async (req, res) => {
   const usua = req._id
   const tp = true;
   const ad = false;
-  res.render("notes/all-notes-sf", { nombre, tp, ad});
+  const ini = false;
+
+  res.render("notes/all-notes-sf", { nombre, tp, ad, ini});
 };
 
 export const renderNotes = async (req, res) => {
@@ -50,6 +56,7 @@ export const renderNotes = async (req, res) => {
       const usua = req._id
       const tp = true;
       const ad = false;
+      const ini = false;
       const notes1 = await Note.findOne({ email: email });
     //  console.log(notes1.email);
       if (!notes1) { 
@@ -204,7 +211,7 @@ export const renderNotes = async (req, res) => {
         .lean();
         const puntos = 0;
          console.log("aqui si estoy")
-         res.render("notes/all-notes-pronos", { notes, nombre,  puntos, tp, ad} );
+         res.render("notes/all-notes-pronos", { notes, nombre,  puntos, tp, ad, ini} );
       
       
       }
@@ -213,7 +220,7 @@ export const renderNotes = async (req, res) => {
 
 
       
-      res.render("notes/all-notes-pronos", {tp, ad});
+      res.render("notes/all-notes-pronos", {tp, ad, ini});
     
     }
 
@@ -222,12 +229,14 @@ else
 {
   const tp = false;
   const ad = true;
+  const ini = false;
+
 //  const notes = await Note.find()
   const notes = await resultados.find()
   .sort({ date: "desc" })
   .lean();
 
-res.render("notes/all-notes", { notes , tp, ad });
+res.render("notes/all-notes", { notes , tp, ad, ini });
 };
 };
 
@@ -238,6 +247,8 @@ export const renderNotesA = async (req, res) => {
   const apellido = req.user.apellido;
   const tp = true;
   const ad = false;
+  const ini = false;
+
   const email = req.user.email;
   const puntos = req.user.puntos;
   const posicion = req.user.posicion;
@@ -245,7 +256,7 @@ export const renderNotesA = async (req, res) => {
   const notes = await Note.find({email: email, grupo:"A"})
     .sort({ date:"desc" })
     .lean();
-     res.render("notes/all-notes-A", { notes, nombre, apellido,  puntos, posicion, tp, ad} );
+     res.render("notes/all-notes-A", { notes, nombre, apellido,  puntos, posicion, tp, ad, ini} );
 }      
 }
 
@@ -256,6 +267,8 @@ export const renderNotesB = async (req, res) => {
     const apellido = req.user.apellido;
     const tp = true;
     const ad = false;
+    const ini = false;
+
     const email = req.user.email;
     const puntos = req.user.puntos;
     const posicion = req.user.posicion;
@@ -263,7 +276,7 @@ export const renderNotesB = async (req, res) => {
     const notes = await Note.find({email: email, grupo:"B"})
       .sort({ date:"desc" })
       .lean();
-       res.render("notes/all-notes-B", { notes, nombre, apellido,  puntos, posicion, tp, ad} );
+       res.render("notes/all-notes-B", { notes, nombre, apellido,  puntos, posicion, tp, ad, ini} );
   }      
   }
   
@@ -276,12 +289,14 @@ export const renderNotesB = async (req, res) => {
       const email = req.user.email;
       const puntos = req.user.puntos;
       const ad = false;
+      const ini = false;
+
       const posicion = req.user.posicion;
       console.log("p",puntos)
       const notes = await Note.find({email: email, grupo:"C"})
         .sort({ date:"desc" })
         .lean();
-         res.render("notes/all-notes-C", { notes, nombre, apellido,  puntos, posicion, tp, ad} );
+         res.render("notes/all-notes-C", { notes, nombre, apellido,  puntos, posicion, tp, ad, ini} );
     }      
     }
 
@@ -292,6 +307,8 @@ export const renderNotesB = async (req, res) => {
         const apellido = req.user.apellido;
         const tp = true;
         const ad = false;
+        const ini = false;
+
         const email = req.user.email;
         const puntos = req.user.puntos;
         const posicion = req.user.posicion;
@@ -299,7 +316,7 @@ export const renderNotesB = async (req, res) => {
         const notes = await Note.find({email: email, grupo:"D"})
           .sort({ date:"desc" })
           .lean();
-           res.render("notes/all-notes-D", { notes, nombre, apellido,  puntos, posicion, tp, ad} );
+           res.render("notes/all-notes-D", { notes, nombre, apellido,  puntos, posicion, tp, ad, ini} );
       }      
       }
 
@@ -309,7 +326,8 @@ export const renderEditForm = async (req, res) => {
   const tip = req.user.tipo_usuario;
   const jue = req.user.status_partido;
   console.log(tip);
-  if (tip == "Jugador"){  const tp = true;   const ad = false;
+  if (tip == "Jugador"){  const tp = true;   const ad = false;  const ini = false;
+
 
 
     const note = await Note.findById(req.params.id).lean();
@@ -318,14 +336,16 @@ export const renderEditForm = async (req, res) => {
         res.redirect("/notes");
      } 
  
-    res.render("notes/edit-note", { note, tp, ad });}
+    res.render("notes/edit-note", { note, tp, ad, ini });}
  
     else
   {
   const tp = false;
   const ad = true;
+  const ini = false;
+
   const note = await resultados.findById(req.params.id).lean();
-  res.render("notes/edit-note", { note, tp, ad });
+  res.render("notes/edit-note", { note, tp, ad, ini });
 }
 
 
@@ -334,9 +354,11 @@ export const renderEditForm = async (req, res) => {
 export const renderVisualizarnotas = async (req, res) => {
   const tp = false;
   const ad = true;
+  const ini = false;
+
   const note = await resultados.findById(req.params.id).lean();
 
-  res.render("notes/visualizar-notas", { note, tp, adm }); 
+  res.render("notes/visualizar-notas", { note, tp, ad, ini }); 
 };
 
 

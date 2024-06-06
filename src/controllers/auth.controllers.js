@@ -1,7 +1,10 @@
 import User from "../models/User.js";
 import passport from "passport";
 
-export const renderSignUpForm = (req, res) => res.render("auth/signup");
+export const renderSignUpForm = (req, res) => 
+  { 
+    const ini = true;
+  res.render("auth/signup", {ini})};
 
 export const signup = async (req, res) => {
   const { name, apellido, email, tipo_usuario, celular, ciudad, profesional, termsAndConditions} = req.body;
@@ -48,10 +51,18 @@ export const signup = async (req, res) => {
   res.redirect("/auth/signin");
 };
 
-export const renderSigninForm = (req, res) => res.render("auth/signin");
+export const renderSigninForm = (req, res) =>{ 
+  const ini = true;
+  res.render("auth/signin", {ini})};
 
-export const renderSigningrupos = (req, res) => res.render("auth/grupos");
-export const renderSigninsedes = (req, res) => res.render("auth/sedes");
+export const renderSigningrupos = (req, res) => 
+  { 
+    const ini = true;
+  res.render("auth/grupos", {ini})};
+export const renderSigninsedes = (req, res) => 
+  { 
+    const ini = true;
+  res.render("auth/sedes", {ini})};
 
 
 export const signin = passport.authenticate("local", {
