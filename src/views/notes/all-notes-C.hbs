@@ -145,13 +145,13 @@
 
 
 <br>
-<h1 style="text-align:center; font-size: 2.5vh " > {{nombre}}   {{apellido}} </h1>
- <h1 style="text-align:center; font-size: 2.5vh "  >Bienvenido al Grupo C</h1> 
+<h1 style="text-align:center; font-size: 2rem " > {{nombre}}   {{apellido}} </h1>
+ <h1 style="text-align:center; font-size: 2rem "  >Bienvenido al Grupo C</h1> 
 <br>
-<h2 style="font-size:2.5vh; margin-left:10%">Su puntuación:  <b>   {{puntos}} </b></h2>
-<h2 style="font-size:2.5vh; margin-left:10%">estas Ubicado en la Posición: <b> {{posicion}}</b></h2>
+<h2 style="font-size:2rem; margin-left:2%">Su puntuación:  <b>   {{puntos}} </b></h2>
+<h2 style="font-size:2rem; margin-left:2%">estas Ubicado en la Posición: <b> {{posicion}}</b></h2>
 <br>
-<div style="width: 80%; text-align:center; margin-left:10%">
+<div style="width: 80%; text-align:center; margin-left:2%">
 
 
 
@@ -160,29 +160,28 @@
   <table class="table table-bordered table-hover table-primary table-striped-columns">
     <thead>
       <tr>
-
-       <th >GRUPO</th>
-        <th >FECHA</th>
-        <th  >EQUIPO </th>
-        <th >PRONÓSTICO</th>
-        <th  >EQUIPO </th>
-        <th >PRONÓSTICO</th>
-        <th >PUNTOS</th>
-        <th  >Acción</th>
+       <th style="font-size: 1.25rem" >GRUPO</th>
+        <th style="font-size: 1.25rem">FECHA</th>
+        <th style="font-size: 1.25rem" >EQUIPO </th>
+        <th style="font-size: 1.25rem">PRONÓSTICO</th>
+        <th  style="font-size: 1.25rem">EQUIPO </th>
+        <th style="font-size: 1.25rem">PRONÓSTICO</th>
+        <th style="font-size: 1.25rem">PUNTOS</th>
+        <th style="font-size: 1.25rem" >Acción</th>
       </tr>
     </thead>
     <tbody>
       {{#each notes}}
-        <tr>
-          <td >{{grupo}}</td>
-          <td >{{fecha}}</td>
+        <tr >
+          <td style="font-size: 1.25rem">{{grupo}}</td>
+          <td style="font-size: 1.25rem">{{fecha}}</td>
 
-		  <td > {{equipo1}}</td>
-          <td >{{pronostico1}}</td>
- 
-		  <td >{{equipo2}}</td>
-          <td >{{pronostico2}}</td>
-          <td >{{puntos}}</td>
+		  <td  style="font-size: 1.25rem"> {{equipo1}}</td>
+          <td style="font-size: 1.25rem">{{pronostico1}}</td>
+
+		  <td style="font-size: 1.25rem">{{equipo2}}</td>
+          <td style="font-size: 1.25rem">{{pronostico2}}</td>
+          <td style="font-size: 1.25rem">{{puntos}}</td>
 
           <td><a href="/notes/edit/{{_id}}"><i class="fas fa-pen-alt" style="color: black"></i></a></td>
           

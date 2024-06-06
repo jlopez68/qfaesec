@@ -50,13 +50,13 @@ export const renderNotes = async (req, res) => {
       const notes1 = await Note.findOne({ email: email });
     //  console.log(notes1.email);
       if (!notes1) { 
-        const newjuego = new Note({ email: req.user.email, status_partido: "A", numero:1, grupo: "A",fecha: '20/06/2024',mapa1: "/img/Argentina.png", mapa2: "/img/Canada.png", equipo1: "ARGENTINA",equipo2: "CANADÁ",RESULTADO1: 0,RESULTADO2: 0, puntos:0});
+        const newjuego = new Note({ email: req.user.email, status_partido: "A", numero:1, grupo: "A",fecha: '20/06/2024',mapa1: "/img/Argentina.png", mapa2: "/img/Canada.png", equipo1: "ARGENTINA",equipo2: "CANADÁ",resultado1: 0,resultado2: 0, puntos:0});
         const juego = await newjuego.save();
         const user = await Note.findOne({email: email, grupo: "A",fecha: '20/06/2024',equipo1: "ARGENTINA",equipo2: "CANADÁ" }).lean();
         const us = user._id
         await Note.findOneAndUpdate({email:req.user.email, grupo: "A",fecha: '20/06/2024',equipo1: "ARGENTINA",equipo2: "CANADÁ" }, { usuario: us }) ;
 
-        const newjuego1 = new Note({email: req.user.email, status_partido: "A", numero:2,grupo: "A",fecha: '21/06/2024',mapa1: "/img/Peru.png", mapa2: "/img/Chile.png", equipo1: "PERÚ",equipo2: "CHILE",RESULTADO1: 0,RESULTADO2: 0, puntos:0});
+        const newjuego1 = new Note({email: req.user.email, status_partido: "A", numero:2,grupo: "A",fecha: '21/06/2024',mapa1: "/img/Peru.png", mapa2: "/img/Chile.png", equipo1: "PERÚ",equipo2: "CHILE",resultado1: 0,resultado2: 0, puntos:0});
         const juego1 = await newjuego1.save();
         const user1 = await Note.findOne({email: email, grupo: "A",fecha: '21/06/2024',equipo1: "PERÚ",equipo2: "CHILE" }).lean();
         const us1 = user1._id
@@ -677,7 +677,7 @@ export const imprimirNote2 = async (req, res) => {
   const pedi2 = await Note.find({email:req.user.email})
   .sort({ date: "desc" })
   .lean();
-
+  console.log(pedi2);
             const doc2 = new PdfkitConstruct2({
             size: 'letter',
 
@@ -726,7 +726,7 @@ export const imprimirNote2 = async (req, res) => {
                   stripedColors: ["#f6f6f6", "#d6c4dd"],
                   cellsPadding: 10,
                   marginLeft: 25,
-                  marginRight: 25
+                  marginRight: 25,
               });
 
              // set the footer to render in every page
