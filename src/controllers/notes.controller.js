@@ -621,33 +621,32 @@ export const imprimirNote = async (req, res) => {
         
 };
 
-
 import PdfkitConstruct1 from "pdfkit-construct";
 import User1 from "../models/User.js";
 export const imprimirNote1 = async (req, res) => {
 
-  const pedi1 = await User1.find({tipo_usuario:"Jugador"})
+  const pedi = await User1.find({tipo_usuario:"Jugador"})
   .sort({ puntos: "desc" })
   .lean();
 
-            const doc1 = new PdfkitConstruct1({
+            const doc = new PdfkitConstruct1({
             size: 'letter',
             margins: {top: 20, left: 5, right: 5, bottom: 20},
             bufferPages: true});
 
             // set the header to render in every page
-            doc1.setDocumentHeader({}, () => {
+            doc.setDocumentHeader({}, () => {
 
 
      //         doc.lineJoin('miter')
      //             .rect(0, 0, doc.page.width, doc.header.options.heightNumber).fill("#ededed");
 
-              doc1.fill("#115dc8")
+              doc.fill("#115dc8")
                   .fontSize(20)
-                  .text("FaesFarma Ecuador", {align: 'center'});
-              doc1.fill("#115dc8")
+                  .text("Gedeon Richter", {align: 'center'});
+              doc.fill("#115dc8")
                   .fontSize(18)
-                  .text("Posición de los Jugadores", {align: 'center'});
+                  .text("Posicion de los Jugadores", {align: 'center'});
 
           });
 
@@ -655,16 +654,17 @@ export const imprimirNote1 = async (req, res) => {
 
             // add a table (you can add multiple tables with different columns)
             // make sure every column has a key. keys should be unique
-            doc1.addTable(
+            doc.addTable(
 
               [
                 {key: 'posicion', label: '#', align: 'left'},
                 {key: 'name', label: 'Nombre', align: 'left'},
-                {key: 'apellido', label: 'Apellido', align: 'left'},
+                {key: 'apellido', label: 'Apelido', align: 'left'},
                 {key: 'email', label: 'Email', align: 'left'},
                 {key: 'puntos', label: 'Puntos', align: 'center'},
+
               ],
-              pedi1, {
+              pedi, {
                   border: null,
                   width: "auto",
                   striped: true,
@@ -675,22 +675,22 @@ export const imprimirNote1 = async (req, res) => {
               });
 
              // set the footer to render in every page
-            doc1.setDocumentFooter({}, () => {
+            doc.setDocumentFooter({}, () => {
 
               //         doc.lineJoin('miter')
               //             .rect(0, doc.footer.y, doc.page.width, doc.footer.options.heightNumber).fill("#c2edbe");
          
-                       doc1.fill("#7416c8")
+                       doc.fill("#7416c8")
                            .fontSize(8)
-                           .text("Quiniela FaesFarma Ecuador", doc1.footer.x, doc1.footer.y + 10);
+                           .text("Quiniela Gedeon Richter", doc.footer.x, doc.footer.y + 10);
                    });
           // render tables
-          doc1.render();
+          doc.render();
             // this should be the last
             // for this to work you need to set bufferPages to true in constructor options 
             //doc.setPageNumbers((p, c) => `Page ${p} of ${c}`, "bottom right");
-            doc1.pipe(res);
-            doc1.end();
+            doc.pipe(res);
+            doc.end();
         
 };
 
