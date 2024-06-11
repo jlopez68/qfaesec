@@ -630,22 +630,22 @@ export const imprimirNote1 = async (req, res) => {
   .sort({ puntos: "desc" })
   .lean();
 
-            const doc = new PdfkitConstruct1({
+            const doc1 = new PdfkitConstruct1({
             size: 'letter',
             margins: {top: 20, left: 5, right: 5, bottom: 20},
             bufferPages: true});
 
             // set the header to render in every page
-            doc.setDocumentHeader({}, () => {
+            doc1.setDocumentHeader({}, () => {
 
 
      //         doc.lineJoin('miter')
      //             .rect(0, 0, doc.page.width, doc.header.options.heightNumber).fill("#ededed");
 
-              doc.fill("#115dc8")
+              doc1.fill("#115dc8")
                   .fontSize(20)
                   .text("FaesFarma Ecuador", {align: 'center'});
-              doc.fill("#115dc8")
+              doc1.fill("#115dc8")
                   .fontSize(18)
                   .text("Posición de los Jugadores", {align: 'center'});
 
@@ -655,7 +655,7 @@ export const imprimirNote1 = async (req, res) => {
 
             // add a table (you can add multiple tables with different columns)
             // make sure every column has a key. keys should be unique
-            doc.addTable(
+            doc1.addTable(
 
               [
                 {key: 'posicion', label: '#', align: 'left'},
@@ -677,22 +677,22 @@ export const imprimirNote1 = async (req, res) => {
               });
 
              // set the footer to render in every page
-            doc.setDocumentFooter({}, () => {
+            doc1.setDocumentFooter({}, () => {
 
               //         doc.lineJoin('miter')
               //             .rect(0, doc.footer.y, doc.page.width, doc.footer.options.heightNumber).fill("#c2edbe");
          
-                       doc.fill("#7416c8")
+                       doc1.fill("#7416c8")
                            .fontSize(8)
-                           .text("Quiniela FaesFarma Ecuador", doc.footer.x, doc.footer.y + 10);
+                           .text("Quiniela FaesFarma Ecuador", doc1.footer.x, doc1.footer.y + 10);
                    });
           // render tables
-          doc.render();
+          doc1.render();
             // this should be the last
             // for this to work you need to set bufferPages to true in constructor options 
             //doc.setPageNumbers((p, c) => `Page ${p} of ${c}`, "bottom right");
-            doc.pipe(res);
-            doc.end();
+            doc1.pipe(res);
+            doc1.end();
         
 };
 
