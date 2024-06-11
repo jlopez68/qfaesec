@@ -626,7 +626,7 @@ import PdfkitConstruct1 from "pdfkit-construct";
 import User1 from "../models/User.js";
 export const imprimirNote1 = async (req, res) => {
 
-  const pedi = await User1.find({tipo_usuario:"Jugador"})
+  const pedi1 = await User1.find({tipo_usuario:"Jugador"})
   .sort({ puntos: "desc" })
   .lean();
 
@@ -665,9 +665,8 @@ export const imprimirNote1 = async (req, res) => {
                 {key: 'celular', label: 'celular', align: 'left'},
                 {key: 'ciudad', label: 'ciudad', align: 'left'},
                 {key: 'puntos', label: 'Puntos', align: 'center'},
-
               ],
-              pedi, {
+              pedi1, {
                   border: null,
                   width: "auto",
                   striped: true,
