@@ -662,8 +662,6 @@ export const imprimirNote1 = async (req, res) => {
                 {key: 'name', label: 'Nombre', align: 'left'},
                 {key: 'apellido', label: 'Apellido', align: 'left'},
                 {key: 'email', label: 'Email', align: 'left'},
-                {key: 'celular', label: 'celular', align: 'left'},
-                {key: 'ciudad', label: 'ciudad', align: 'left'},
                 {key: 'puntos', label: 'Puntos', align: 'center'},
               ],
               pedi1, {
