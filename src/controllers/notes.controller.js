@@ -120,18 +120,18 @@ export const renderNotes = async (req, res) => {
         const us9 = user9._id
         await Note.findOneAndUpdate({email:req.user.email, grupo: "B",fecha: '26/06/2024',equipo1: "VENEZUELA",equipo2: "MÉXICO" }, { usuario: us9}) ;
 
-        const newjuego10 = new Note({email: req.user.email, status_partido: "A", numero:11,grupo: "B",fecha: '29/06/2024',mapa1: "/img/Jamaica.png", mapa2: "/img/Venezuela.png",equipo1: "JAMAICA",equipo2: "VENEZUELA",resultado1: 0,resultado2: 0, puntos:0});
+        const newjuego10 = new Note({email: req.user.email, status_partido: "A", numero:11,grupo: "B",fecha: '30/06/2024',mapa1: "/img/Jamaica.png", mapa2: "/img/Venezuela.png",equipo1: "JAMAICA",equipo2: "VENEZUELA",resultado1: 0,resultado2: 0, puntos:0});
         const juego10 = await newjuego10.save();
-        const user10 = await Note.findOne({email: email, grupo: "B",fecha: '29/06/2024',equipo1: "JAMAICA",equipo2: "VENEZUELA" }).lean();
+        const user10 = await Note.findOne({email: email, grupo: "B",fecha: '30/06/2024',equipo1: "JAMAICA",equipo2: "VENEZUELA" }).lean();
         const us10 = user10._id
-        await Note.findOneAndUpdate({email:req.user.email, grupo: "B",fecha: '29/06/2024',equipo1: "JAMAICA",equipo2: "VENEZUELA" }, { usuario: us10}) ;
+        await Note.findOneAndUpdate({email:req.user.email, grupo: "B",fecha: '30/06/2024',equipo1: "JAMAICA",equipo2: "VENEZUELA" }, { usuario: us10}) ;
 
 
-        const newjuego11 = new Note({email: req.user.email, status_partido: "A", numero:12,grupo: "B",fecha: '29/06/2024',mapa1: "/img/Mexico.png", mapa2: "/img/Ecuador.png",equipo1: "MÉXICO",equipo2: "ECUADOR",resultado1: 0,resultado2: 0, puntos:0});
+        const newjuego11 = new Note({email: req.user.email, status_partido: "A", numero:12,grupo: "B",fecha: '30/06/2024',mapa1: "/img/Mexico.png", mapa2: "/img/Ecuador.png",equipo1: "MÉXICO",equipo2: "ECUADOR",resultado1: 0,resultado2: 0, puntos:0});
         const juego11 = await newjuego11.save();
-        const user11 = await Note.findOne({email: email, grupo: "B",fecha: '29/06/2024',equipo1: "MÉXICO",equipo2: "ECUADOR" }).lean();
+        const user11 = await Note.findOne({email: email, grupo: "B",fecha: '30/06/2024',equipo1: "MÉXICO",equipo2: "ECUADOR" }).lean();
         const us11 = user11._id
-        await Note.findOneAndUpdate({email:req.user.email, grupo: "B",fecha: '29/06/2024',equipo1: "MÉXICO",equipo2: "ECUADOR" }, { usuario: us11}) ;
+        await Note.findOneAndUpdate({email:req.user.email, grupo: "B",fecha: '30/06/2024',equipo1: "MÉXICO",equipo2: "ECUADOR" }, { usuario: us11}) ;
 
 
         const newjuego12 = new Note({email: req.user.email, status_partido: "A", numero:13,grupo: "C",fecha: '23/06/2024',mapa1: "/img/Usa.png", mapa2: "/img/Bolivia.png",equipo1: "USA",equipo2: "BOLIVIA",resultado1: 0,resultado2: 0, puntos:0});

@@ -30,9 +30,9 @@ export const createAdminUser = async () => {
            const juego8 = await newjuego8.save();
              const newjuego9 = new Juegos({jugado:"N",numero:10,grupo: "B",fecha: '26/06/2024',equipo1: "VENEZUELA",equipo2: "MÉXICO",RESULTADO1: 0,RESULTADO2: 0});
              const juego9 = await newjuego9.save();
-               const newjuego10 = new Juegos({jugado:"N",numero:11,grupo: "B",fecha: '29/06/2024',equipo1: "JAMAICA",equipo2: "VENEZUELA",RESULTADO1: 0,RESULTADO2: 0});
+               const newjuego10 = new Juegos({jugado:"N",numero:11,grupo: "B",fecha: '30/06/2024',equipo1: "JAMAICA",equipo2: "VENEZUELA",RESULTADO1: 0,RESULTADO2: 0});
                const juego10 = await newjuego10.save();
-                 const newjuego11 = new Juegos({jugado:"N",numero:12,grupo: "B",fecha: '29/06/2024',equipo1: "MÉXICO",equipo2: "ECUADOR",RESULTADO1: 0,RESULTADO2: 0});
+                 const newjuego11 = new Juegos({jugado:"N",numero:12,grupo: "B",fecha: '30/06/2024',equipo1: "MÉXICO",equipo2: "ECUADOR",RESULTADO1: 0,RESULTADO2: 0});
                  const juego11 = await newjuego11.save();
                const newjuego12 = new Juegos({jugado:"N",numero:13,grupo: "C",fecha: '23/06/2024',equipo1: "USA",equipo2: "BOLIVIA",RESULTADO1: 0,RESULTADO2: 0});
                const juego12 = await newjuego12.save();
