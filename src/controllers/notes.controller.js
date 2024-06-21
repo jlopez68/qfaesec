@@ -520,7 +520,7 @@ async function  posicion (err, _id) {
    
 //console.log(ver);
 //console.log(ver1);
-//  const doc2 = await Usuario.updateOne({email: notes100.email},  {posicion:step});
+const doc2 = await Usuario.updateOne({email: notes100.email},  {posicion:step});
   
   
   
