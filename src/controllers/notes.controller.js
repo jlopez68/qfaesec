@@ -501,28 +501,33 @@ export const updateNote = async (req, res) => {
 // vamos con la posicion
 
 
- User.find({tipo_usuario:"Jugador"}).sort({ puntos: "desc" }).lean().exec(posicion);
-
-async function  posicion (err, _id) {
+Usuario.find({tipo_usuario:"Jugador"},{_id:0,email:1}).sort({ puntos: "desc" }).lean().exec(posicion1);
+     
+async function  posicion1 (err, _id) {
 
  if(err) {
    console.log("error");
    console.log(err);
  }
  const ciclo = _id.length;
- //console.log("ciclo",ciclo);
- //console.log(_id[0]);
+ console.log("ciclo",ciclo);
+  console.log(_id[0]);
  for (let step = 0; step < ciclo; step++) {
    // Runs 5 times, with values of step 0 through 4.
 //       console.log(_id.usuario[0])  
    let ver = JSON.stringify(_id[step]); 
-   var ver1 = ver.slice(12,-2);
+   var ver1 = ver.slice(10,-2);
    
-//console.log(ver);
-//console.log(ver1);
-const doc2 = await Usuario.updateOne({email: notes100.email},  {posicion:step});
-  
-  
+console.log(ver);
+console.log(ver1);
+const notes100 = await User.findOne( {email:ver1}).lean();
+  const pos = step+1;   
+  const doc2 = await Usuario.updateOne({email: notes100.email},  {posicion:pos});
+  if(err) {
+    console.log("error");
+    console.log(err);
+  }
+  console.log("aca entre");
   
  }
 }
