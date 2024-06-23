@@ -539,6 +539,43 @@ const notes100 = await User.findOne( {email:ver1}).lean();
 
 
 
+export const calcularposicion = async (req, res) => {
+
+  Usuario.find({tipo_usuario:"Jugador"},{_id:0,email:1}).sort({ puntos: "desc" }).lean().exec(posicion1);
+  res.redirect("/notes");     
+  async function  posicion1 (err, _id) {
+  
+   if(err) {
+     console.log("error");
+     console.log(err);
+   }
+   const ciclo = _id.length;
+   console.log("ciclo2",ciclo);
+    console.log(_id[0]);
+   for (let step = 0; step < ciclo; step++) {
+     // Runs 5 times, with values of step 0 through 4.
+  //       console.log(_id.usuario[0])  
+     let ver = JSON.stringify(_id[step]); 
+     var ver1 = ver.slice(10,-2);
+     
+  console.log(ver);
+  console.log(ver1);
+  const notes100 = await User.findOne( {email:ver1}).lean();
+    const pos = step+1;   
+    console.log("pos1",pos);
+    console.log("email",notes100.email);
+       
+    const doc2 = await Usuario.updateOne({email: notes100.email},  {posicion:pos});
+    if(err) {
+      console.log("error");
+      console.log(err);
+    }
+    console.log("aca entre");
+    
+   }
+  }
+  
+  };
 
 
 export const deleteNote = async (req, res) => {
